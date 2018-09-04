@@ -1,0 +1,14 @@
+<header class="site_header">
+    <div class="nav_container">
+        <nav>
+            <ul>
+                <h1 class="monospace">
+                    <a href="">orangy</a>
+                </h1>
+                {% for item in site.data.navigation %}
+                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

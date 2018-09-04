@@ -1,0 +1,14 @@
+baseurl: ""
+
+sass:
+  # sass_dir: _sass
+  style: compressed
+
+
+nav-list:
+  - title: 'Home'
+    link: ''
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag

@@ -1,5 +1,20 @@
 ---
 layout: default
 ---
+<article>
+<h1 class="article_heading">{{ page.title }}</h1>
 
+<p class="article_desc">
+{{ page.date | date_to_string }}<br />
+<span id="readtime"></span> min read
+</p>
+
+<script>
+    // Add reading time (avg. of 250 words per min)
+    let desc = document.getElementById("readtime");
+    desc.innerHTML = Math.ceil({{ page.content | number_of_words }}/250)
+</script>
+<!-- <p class="meta"><a class="permalink" href="{{ site.baseurl }}{{ post.url }}">&#9679;</a> {{ page.date | date_to_string }}</p> -->
 {{ content }}
+{% include tags.html %}
+</article>
